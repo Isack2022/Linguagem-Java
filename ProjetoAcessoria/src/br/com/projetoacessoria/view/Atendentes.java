@@ -74,9 +74,9 @@ public class Atendentes extends JFrame {
 			setTitle("Suporte");
 			setResizable(false);
 			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			setBounds(100, 100, 737, 571);
+			setBounds(100, 100, 833, 625);
 			contentPane = new JPanel();
-			contentPane.setBackground(new Color(0, 255, 0));
+			contentPane.setBackground(new Color(0, 210, 0));
 			contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 			setLocationRelativeTo(null);
 			setContentPane(contentPane);
@@ -84,68 +84,68 @@ public class Atendentes extends JFrame {
 			
 			carregarTabela();
 			
-			lblId = new JLabel("Id:");
+			lblId = new JLabel("ID:");
 			lblId.setHorizontalAlignment(SwingConstants.CENTER);
-			lblId.setFont(new Font("Segoe UI Semilight", Font.PLAIN, 13));
-			lblId.setBounds(34, 21, 40, 40);
+			lblId.setFont(new Font("Segoe UI Semilight", Font.PLAIN, 18));
+			lblId.setBounds(28, 109, 40, 40);
 			contentPane.add(lblId);
 			
 			lblStatus = new JLabel("Status:");
 			lblStatus.setHorizontalAlignment(SwingConstants.CENTER);
-			lblStatus.setFont(new Font("Segoe UI Semilight", Font.PLAIN, 13));
-			lblStatus.setBounds(285, 21, 69, 40);
+			lblStatus.setFont(new Font("Segoe UI Semilight", Font.PLAIN, 18));
+			lblStatus.setBounds(349, 109, 69, 40);
 			contentPane.add(lblStatus);
 			
 			lblDataResolucao = new JLabel("Data de resolução do Chamado:");
 			lblDataResolucao.setHorizontalAlignment(SwingConstants.CENTER);
-			lblDataResolucao.setFont(new Font("Segoe UI Semilight", Font.PLAIN, 13));
-			lblDataResolucao.setBounds(34, 104, 191, 40);
+			lblDataResolucao.setFont(new Font("Segoe UI Semilight", Font.PLAIN, 18));
+			lblDataResolucao.setBounds(34, 179, 246, 40);
 			contentPane.add(lblDataResolucao);
 			
 			lblResponsavel = new JLabel("Funcionário:");
 			lblResponsavel.setHorizontalAlignment(SwingConstants.CENTER);
-			lblResponsavel.setFont(new Font("Segoe UI Semilight", Font.PLAIN, 13));
-			lblResponsavel.setBounds(285, 104, 90, 40);
+			lblResponsavel.setFont(new Font("Segoe UI Semilight", Font.PLAIN, 18));
+			lblResponsavel.setBounds(333, 179, 146, 40);
 			contentPane.add(lblResponsavel);
 			
 			lblObservacoes = new JLabel("Observações:");
 			lblObservacoes.setHorizontalAlignment(SwingConstants.CENTER);
-			lblObservacoes.setFont(new Font("Segoe UI Semilight", Font.PLAIN, 13));
-			lblObservacoes.setBounds(34, 179, 90, 40);
+			lblObservacoes.setFont(new Font("Segoe UI Semilight", Font.PLAIN, 18));
+			lblObservacoes.setBounds(28, 258, 124, 40);
 			contentPane.add(lblObservacoes);
 
 			
 			
 			txtObservacoes = new JTextField();
-			txtObservacoes.setBounds(41, 230, 508, 45);
+			txtObservacoes.setBounds(38, 293, 773, 45);
 			contentPane.add(txtObservacoes);
 			txtObservacoes.setColumns(10);
 			
 			txtId = new JTextField();
 			txtId.setColumns(10);
-			txtId.setBounds(41, 66, 201, 27);
+			txtId.setBounds(34, 144, 289, 40);
 			contentPane.add(txtId);
 			
 			txtStatus = new JTextField();
 			txtStatus.setColumns(10);
-			txtStatus.setBounds(288, 66, 256, 27);
+			txtStatus.setBounds(354, 144, 457, 34);
 			contentPane.add(txtStatus);
 			
 			txtResponsavel = new JTextField();
 			txtResponsavel.setColumns(10);
-			txtResponsavel.setBounds(285, 145, 259, 27);
+			txtResponsavel.setBounds(354, 210, 453, 40);
 			contentPane.add(txtResponsavel);
 			
 			dr = new MaskFormatter("####-##-##");
 			dr.setPlaceholderCharacter('_');
 			
 			txtDataResolucao = new JFormattedTextField(dr);
-			txtDataResolucao.setBounds(41, 145, 201, 27);
+			txtDataResolucao.setBounds(34, 210, 289, 40);
 			contentPane.add(txtDataResolucao);
 			
 			panel = new JPanel();
 			panel.setBackground(new Color(255, 255, 255));
-			panel.setBounds(554, 442, 149, 34);
+			panel.setBounds(645, 419, 162, 40);
 			contentPane.add(panel);
 			
 			lblExcluir = new JLabel("Excluir Chamados");
@@ -171,11 +171,11 @@ public class Atendentes extends JFrame {
 				}
 			});
 			lblExcluir.setHorizontalAlignment(SwingConstants.CENTER);
-			lblExcluir.setFont(new Font("Segoe UI Semilight", Font.PLAIN, 15));
+			lblExcluir.setFont(new Font("Segoe UI Semilight", Font.PLAIN, 20));
 			
 			panel_1 = new JPanel();
 			panel_1.setBackground(new Color(255, 255, 255));
-			panel_1.setBounds(554, 487, 149, 34);
+			panel_1.setBounds(645, 368, 162, 40);
 			contentPane.add(panel_1);
 			
 			
@@ -204,7 +204,13 @@ public class Atendentes extends JFrame {
 				}
 			});
 			lblAtualizar.setHorizontalAlignment(SwingConstants.CENTER);
-			lblAtualizar.setFont(new Font("Segoe UI Semilight", Font.PLAIN, 15));
+			lblAtualizar.setFont(new Font("Segoe UI Semilight", Font.PLAIN, 18));
+			
+			JLabel lblNewLabel = new JLabel("Parte administrativa - Whatsapp");
+			lblNewLabel.setForeground(new Color(0, 0, 0));
+			lblNewLabel.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 25));
+			lblNewLabel.setBounds(34, 58, 773, 40);
+			contentPane.add(lblNewLabel);
 			
 			
 		}
@@ -217,7 +223,7 @@ public class Atendentes extends JFrame {
 	private void carregarTabela() {
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(41, 295, 503, 226);
+		scrollPane.setBounds(34, 349, 601, 226);
 		contentPane.add(scrollPane);
 		
 		String[] cabecalho = {
