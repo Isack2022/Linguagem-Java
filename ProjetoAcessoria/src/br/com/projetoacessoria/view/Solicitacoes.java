@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.Date;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -15,17 +16,19 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import javax.swing.text.MaskFormatter;
 
 import br.com.projetoacessoria.dao.CRUDChamado;
 import br.com.projetoacessoria.domain.Chamado;
 import java.awt.Color;
 import java.awt.Toolkit;
+import javax.swing.JFormattedTextField;
 
 public class Solicitacoes extends JFrame {
 
 	private JPanel contentPane;
 	CRUDChamado cc = new CRUDChamado();
-	
+	MaskFormatter ds;
 	private JTextField txtDepartamento;
 	private JTextField txtNome;
 	private JLabel lblNome;
@@ -34,6 +37,7 @@ public class Solicitacoes extends JFrame {
 	private JTextArea txtDescricao;
 	private JLabel lblRealizarChamado;
 	private JLabel lblNewLabel;
+	private JFormattedTextField txtDataSolicitacao;
 	
 	
 
@@ -57,6 +61,7 @@ public class Solicitacoes extends JFrame {
 	 * Create the frame.
 	 */
 	public Solicitacoes() {
+		try {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Solicitacoes.class.getResource("/br/com/projetoacessoria/image/zap.png")));
 		setTitle("Suporte");
 		setResizable(false);
@@ -71,7 +76,7 @@ public class Solicitacoes extends JFrame {
 
 		lblNome = new JLabel("Insira seu nome:");
 		lblNome.setFont(new Font("Segoe UI Semilight", Font.PLAIN, 18));
-		lblNome.setBounds(27, 91, 151, 32);
+		lblNome.setBounds(27, 73, 151, 32);
 		contentPane.add(lblNome);
 		
 		lblDescricao = new JLabel("Fale seu problema:");
@@ -81,7 +86,7 @@ public class Solicitacoes extends JFrame {
 		
 		lblDepartamento = new JLabel("Informe o departamento:");
 		lblDepartamento.setFont(new Font("Segoe UI Semilight", Font.PLAIN, 18));
-		lblDepartamento.setBounds(27, 176, 304, 32);
+		lblDepartamento.setBounds(27, 160, 304, 32);
 		contentPane.add(lblDepartamento);
 		
 		
@@ -94,13 +99,13 @@ public class Solicitacoes extends JFrame {
 		scrollPane.setViewportView(txtDescricao);
 	
 		txtDepartamento = new JTextField();
-		txtDepartamento.setBounds(27, 219, 519, 44);
+		txtDepartamento.setBounds(27, 189, 519, 44);
 		contentPane.add(txtDepartamento);
 		txtDepartamento.setColumns(10);
 		
 		txtNome = new JTextField();
 		txtNome.setColumns(10);
-		txtNome.setBounds(27, 134, 519, 44);
+		txtNome.setBounds(27, 105, 263, 44);
 		contentPane.add(txtNome);
 		
 		JPanel panel = new JPanel();
@@ -115,11 +120,12 @@ public class Solicitacoes extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				Chamado soliChamado = new Chamado();
 				
-				if(txtNome.getText().trim().equals("") || txtDepartamento.getText().trim().equals("") || txtDescricao.getText().trim().equals("")) {
+				if(txtNome.getText().trim().equals("") || txtDataSolicitacao.getText().trim().equals("") || txtDepartamento.getText().trim().equals("") || txtDescricao.getText().trim().equals("")) {
 					JOptionPane.showMessageDialog(null, "Todos os campos devem ser preenchidos.", "Erro na solicitação" , JOptionPane.ERROR_MESSAGE);
 				}
 				else {
 					soliChamado.setSolicitacao(txtNome.getText());
+					soliChamado.setDataAbertura(Date.valueOf(txtDataSolicitacao.getText()));
 					soliChamado.setDepSolicitado(txtDepartamento.getText());
 					soliChamado.setDescChamado(txtDescricao.getText());
 					
@@ -132,12 +138,26 @@ public class Solicitacoes extends JFrame {
 		lblRealizarChamado.setHorizontalAlignment(SwingConstants.CENTER);
 		lblRealizarChamado.setFont(new Font("Segoe UI Semilight", Font.PLAIN, 40));
 		
-		lblNewLabel = new JLabel("Bem vindo ao suporte vItual do Whatsapp");
+		lblNewLabel = new JLabel("Bem vindo ao suporte vitual do Whatsapp");
 		lblNewLabel.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 18));
-		lblNewLabel.setBounds(27, 41, 519, 39);
+		lblNewLabel.setBounds(27, 23, 519, 39);
 		contentPane.add(lblNewLabel);
 		
+		ds = new MaskFormatter("####-##-##");
+		ds.setPlaceholderCharacter('_');
 		
+		txtDataSolicitacao = new JFormattedTextField(ds);
+		txtDataSolicitacao.setBounds(312, 105, 234, 44);
+		contentPane.add(txtDataSolicitacao);
+		
+		JLabel lblDataDeSolicitao = new JLabel("Data de Solicitação:");
+		lblDataDeSolicitao.setFont(new Font("Segoe UI Semilight", Font.PLAIN, 18));
+		lblDataDeSolicitao.setBounds(312, 73, 151, 32);
+		contentPane.add(lblDataDeSolicitao);
+		
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	private void limparCampos() {
 		txtNome.setText("");

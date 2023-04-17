@@ -144,7 +144,7 @@ public class AcessSSH {
 				}
 			}
 			
-			Process pr = Runtime.getRuntime().exec("c:\\program files\\google\\chrome\\application\\chrome.exe http://127.0.0.1:8888");
+			Process pr = Runtime.getRuntime().exec("c:\\program files\\google\\chrome\\application\\chrome.exe http://127.0.0.1:7557/grafico.html");
 			BufferedReader leitor = new BufferedReader(new InputStreamReader(pr.getInputStream()));
 			String rs = "";
 			while((rs = leitor.readLine())!=null) {
