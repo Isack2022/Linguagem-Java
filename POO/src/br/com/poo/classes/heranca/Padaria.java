@@ -255,7 +255,7 @@ public class Padaria extends JFrame {
 		JLabel lblSubtotal = new JLabel("Subtotal:");
 		lblSubtotal.setForeground(new Color(255, 255, 255));
 		lblSubtotal.setFont(new Font("Arial", Font.ITALIC, 25));
-		lblSubtotal.setBounds(10, 562, 186, 33);
+		lblSubtotal.setBounds(10, 562, 186, 33); 
 		pnlEsquerdo.add(lblSubtotal);
 		
 		txtSubtotal = new JTextField();
