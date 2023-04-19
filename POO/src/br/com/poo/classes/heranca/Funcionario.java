@@ -32,3 +32,4 @@ public class Funcionario extends PessoaFisica{
 		this.setor = setor;
 	}
 }
+ 
