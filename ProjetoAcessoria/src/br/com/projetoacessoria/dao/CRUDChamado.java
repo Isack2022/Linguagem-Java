@@ -14,12 +14,13 @@ public class CRUDChamado extends Conexao implements CRUD<Chamado>{
 		
 		try {
 			abrirConexao();
-			String sql = "INSERT INTO chamando(solicitacao,departamento,descricao)values(?,?,?)";
+			String sql = "INSERT INTO chamando(solicitacao,departamento,descricao,dataabertura)values(?,?,?,?)";
 			pst = conn.prepareStatement(sql);
 			
 			pst.setString(1, obj.getSolicitacao());
 			pst.setString(2, obj.getDepSolicitado());
 			pst.setString(3, obj.getDescChamado());
+			pst.setDate(4, obj.getDataAbertura());
 			
 			int i = pst.executeUpdate();
 			if(i > 0) {
@@ -154,17 +155,20 @@ public class CRUDChamado extends Conexao implements CRUD<Chamado>{
 	public Chamado atualizar(Chamado obj) {
 		Chamado chamado = new Chamado();
 		try {
+			String txt="";
 			abrirConexao();
-			String sql = "UPDATE chamando SET dataresolucao=?, statuschamando?, nomefun=? WHERE idcadastros=?";
+			String sql = "UPDATE chamando set dataresolucao=?, statuschamando=?,Observacoes=?,nomefun=? where idcadastros=?;";
 			pst = conn.prepareStatement(sql);
 			pst.setDate(1, obj.getDataResolucao());
 			pst.setString(2, obj.getStatusChamado());
-			pst.setString(3, obj.getAtendente());
-			pst.setLong(4, obj.getIdChamado());
+			pst.setString(3, obj.getObservacoes());
+			pst.setString(4, obj.getAtendente());
+			pst.setLong(5, obj.getIdChamado());
 			
 			int i = pst.executeUpdate();
 			if(i > 0) {
 				chamado = obj;
+				txt = "Modificação realizando com sucesso.";
 			}
 			else {
 				throw new Exception("Não foi possível atuaizar os dados");

@@ -120,14 +120,14 @@ public class Solicitacoes extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				Chamado soliChamado = new Chamado();
 				
-				if(txtNome.getText().trim().equals("") || txtDataSolicitacao.getText().trim().equals("") || txtDepartamento.getText().trim().equals("") || txtDescricao.getText().trim().equals("")) {
+				if(txtNome.getText().trim().equals("") || txtDepartamento.getText().trim().equals("") || txtDescricao.getText().trim().equals("") || txtDataSolicitacao.getText().trim().equals("")) {
 					JOptionPane.showMessageDialog(null, "Todos os campos devem ser preenchidos.", "Erro na solicitação" , JOptionPane.ERROR_MESSAGE);
 				}
 				else {
 					soliChamado.setSolicitacao(txtNome.getText());
-					soliChamado.setDataAbertura(Date.valueOf(txtDataSolicitacao.getText()));
 					soliChamado.setDepSolicitado(txtDepartamento.getText());
 					soliChamado.setDescChamado(txtDescricao.getText());
+					soliChamado.setDataAbertura(Date.valueOf(txtDataSolicitacao.getText()));
 					
 					JOptionPane.showMessageDialog(null, cc.registrar(soliChamado));
 					
@@ -163,5 +163,7 @@ public class Solicitacoes extends JFrame {
 		txtNome.setText("");
 		txtDepartamento.setText("");
 		txtDescricao.setText("");
+		txtDataSolicitacao.setText("");
 	}
 }
+

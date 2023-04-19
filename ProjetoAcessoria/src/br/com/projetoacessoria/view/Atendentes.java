@@ -1,13 +1,14 @@
 package br.com.projetoacessoria.view;
 
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.SystemColor;
+import java.awt.Toolkit;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.Date;
 
-import javax.swing.ImageIcon;
 import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -23,8 +24,7 @@ import javax.swing.text.MaskFormatter;
 
 import br.com.projetoacessoria.dao.CRUDChamado;
 import br.com.projetoacessoria.domain.Chamado;
-import java.awt.Color;
-import java.awt.Toolkit;
+import br.com.projetoacessoria.util.AcessoSSH;
 
 public class Atendentes extends JFrame {
 
@@ -145,7 +145,7 @@ public class Atendentes extends JFrame {
 			
 			panel = new JPanel();
 			panel.setBackground(new Color(255, 255, 255));
-			panel.setBounds(645, 419, 162, 40);
+			panel.setBounds(645, 452, 166, 40);
 			contentPane.add(panel);
 			
 			lblExcluir = new JLabel("Excluir Chamados");
@@ -175,7 +175,7 @@ public class Atendentes extends JFrame {
 			
 			panel_1 = new JPanel();
 			panel_1.setBackground(new Color(255, 255, 255));
-			panel_1.setBounds(645, 368, 162, 40);
+			panel_1.setBounds(645, 401, 162, 40);
 			contentPane.add(panel_1);
 			
 			
@@ -189,7 +189,7 @@ public class Atendentes extends JFrame {
 					if(txtResponsavel.getText().trim().equals("") || txtStatus.getText().trim().equals("") || txtId.getText().trim().equals("") 
 							|| txtDataResolucao.getText().trim().equals("")) {
 						JOptionPane.showMessageDialog(null, "Os campos Responsável Chamado, Id do Chamado, Status do Chamado e Data de Resolução devem ser preenchidos",
-								"Erro 4000765x" , JOptionPane.ERROR_MESSAGE);
+								"Erro 202363XXc" , JOptionPane.ERROR_MESSAGE);
 					}
 					else {
 						rChamado.setAtendente(txtResponsavel.getText());
@@ -198,6 +198,7 @@ public class Atendentes extends JFrame {
 						rChamado.setObservacoes(txtObservacoes.getText());
 						rChamado.setIdChamado(id);
 						
+						JOptionPane.showMessageDialog(null, cc.atualizar(rChamado));
 						carregarTabela();
 						limparCampos();
 					}
@@ -211,6 +212,23 @@ public class Atendentes extends JFrame {
 			lblNewLabel.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 25));
 			lblNewLabel.setBounds(34, 58, 773, 40);
 			contentPane.add(lblNewLabel);
+			
+			JPanel panel_2 = new JPanel();
+			panel_2.setBackground(Color.WHITE);
+			panel_2.setBounds(645, 503, 166, 40);
+			contentPane.add(panel_2);
+			
+			JLabel lblGrafico = new JLabel("Gráfico");
+			lblGrafico.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					AcessoSSH shh = new AcessoSSH();
+					shh.executar();
+				}
+			});
+			lblGrafico.setHorizontalAlignment(SwingConstants.CENTER);
+			lblGrafico.setFont(new Font("Segoe UI Semilight", Font.PLAIN, 20));
+			panel_2.add(lblGrafico);
 			
 			
 		}
