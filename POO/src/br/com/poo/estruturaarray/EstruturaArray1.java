@@ -14,6 +14,6 @@ public class EstruturaArray1 {
 		
 		System.out.println(cidades.length);
 
-	}
+	} 
 
 }

@@ -18,6 +18,6 @@ public class EstruturaMatriz1 {
 			}
 			System.out.println();
 		}
-	}
+	} 
 
 }
