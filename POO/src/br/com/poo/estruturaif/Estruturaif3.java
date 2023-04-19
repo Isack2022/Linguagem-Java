@@ -19,7 +19,7 @@ public class Estruturaif3 {
 		
 		System.out.println("Digite a quarta nota:");
 		nota4 = entrada.nextDouble();
-		
+		 
 		media = (nota1+nota2+nota3+nota4)/4;
 	
 		System.out.println("A média do aluno é "+media);

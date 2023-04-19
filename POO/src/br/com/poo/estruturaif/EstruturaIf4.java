@@ -25,7 +25,7 @@ public class EstruturaIf4 {
 		}
 		else {
 			resultado = 7507.49 * (14.0/100);
-		}
+		} 
 		
 		System.out.println("O desconto do INSS para o seu salário é "+resultado);
 	}

@@ -26,6 +26,6 @@ public class EstruturaINSS {
 			System.out.println("O desconto será de:" +7507.49 *0.14);
 			
 		}
-	}
+	} 
 
 }

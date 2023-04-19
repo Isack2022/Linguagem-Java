@@ -17,7 +17,7 @@ public class Estruturaif2 {
 		
 		System.out.println("Digite a primeira nota: ");
 		nota1 = entrada.nextDouble();
-		
+		 
 		System.out.println("\nDigite a segunda nota:");
 		nota2 = entrada.nextDouble();
 		
