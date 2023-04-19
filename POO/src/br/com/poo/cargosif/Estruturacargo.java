@@ -40,7 +40,7 @@ public class Estruturacargo extends JOptionPane {
 		}
 		JOptionPane.showMessageDialog(null, rs,"Resposta",JOptionPane.INFORMATION_MESSAGE);
 	}
-
+ 
 
 	}
 
