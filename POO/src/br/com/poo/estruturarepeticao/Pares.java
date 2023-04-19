@@ -21,7 +21,7 @@ public class Pares extends JOptionPane {
 		int ter = Integer.parseInt(termino);
 		
 		for(int i = in; i <= ter ; i++) {
-			if( i % 2 == 0) {
+			if( i % 2 == 0) { 
 				resultado += "\n"+i;
 			}
 		}

@@ -25,7 +25,7 @@ public class EstruturaWhile1 extends JFrame {
 	String dados = "";
 	int i; 
 
-	/**
+	/** 
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {

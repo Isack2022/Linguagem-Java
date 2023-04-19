@@ -22,7 +22,7 @@ public class Tabuada extends JFrame {
 		 * JFrame. Abaixo um processo de instância
 		 * */
 		JFrame janela = new JFrame();
-		
+		 
 		//tamanho em largura e altura
 		janela.setSize(500, 400);
 		
