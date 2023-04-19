@@ -33,7 +33,7 @@ public class Banco extends JFrame {
 					e.printStackTrace();
 				}
 			}
-		});
+		}); 
 	}
 
 	/**

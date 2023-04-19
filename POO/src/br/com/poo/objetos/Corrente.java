@@ -34,7 +34,7 @@ public class Corrente extends JFrame {
 	 */
 	public Corrente() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Corrente.class.getResource("/br/com/poo/imagens/itau-logo-2.png")));
-		
+		 
 		corrente = new ContaCorrente();
 		
 		setTitle("Itaú- Conta Corrente");

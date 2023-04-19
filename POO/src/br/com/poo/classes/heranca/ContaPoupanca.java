@@ -12,7 +12,7 @@ public class ContaPoupanca extends ContaBancaria {
 	public ContaPoupanca(Long numeroBanco, int agencia,Long numeroConta,String titular,double saldo, double rendimento) {
 		this.rendimento = rendimento;
 		this.setNumeroBanco(numeroBanco);
-		this.setAgencia(agencia);
+		this.setAgencia(agencia); 
 		this.setNumeroConta(agencia);
 		this.setTitular(titular);
 		this.setSaldo(saldo);

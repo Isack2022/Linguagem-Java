@@ -17,7 +17,7 @@ public class ContaCorrente extends ContaBancaria {
 		super.setNumeroConta(numeroConta);
 		super.setTitular(titular);
 		super.setSaldo(saldo);
-		this.limite = limite;
+		this.limite = limite; 
 		limiteInicial = limite;
 	}
 	
