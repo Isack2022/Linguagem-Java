@@ -20,7 +20,7 @@ public class Produto {
 	}
 	
 	public Produto() {}
-	
+	 
 	public void cadastrar() {
 		System.out.println("Produto cadastrado");
 	}

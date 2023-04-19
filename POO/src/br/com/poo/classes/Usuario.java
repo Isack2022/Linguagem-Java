@@ -20,6 +20,6 @@ public class Usuario {
 				"\nId Usuário:"+id +
 				"\nNome: "+nomeUsuario +
 				"\nGrupo:"+grupo
-				);
+				); 
 	}
 }

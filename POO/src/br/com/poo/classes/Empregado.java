@@ -12,7 +12,7 @@ public class Empregado implements Acoes{
 	}
 
 	@Override
-	public String salvar() {
+	public String salvar() { 
 		return "Salvo com sucesso!";
 	}
 
