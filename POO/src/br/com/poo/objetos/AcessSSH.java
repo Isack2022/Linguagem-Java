@@ -117,7 +117,7 @@ public class AcessSSH {
 			 * que 0(zero), está linhas deveram ser apresentadas no terminal. O uso do cmando new String(tmp,0,i)
 			 * faz a conversão de bytes que etão vindo como resposta e a variável i contya a quantidades de linhas
 			 * que retorna.
-			 */
+			 */ 
 			while(true) {
 				while(in.available()>0) {
 					int i = in.read(tmp,0,1024);

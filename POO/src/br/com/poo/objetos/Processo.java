@@ -41,7 +41,7 @@ public class Processo {
 				System.out.print(rs);
 			}
 		}
-		catch(Exception e) {
+		catch(Exception e) { 
 			e.printStackTrace();
 		}
 
