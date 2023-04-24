@@ -14,7 +14,7 @@ public class salarioif {
 		
 		if(salario <= 1302) {
 			desconto = salario * (7.5/100);
-			
+			 
 		}
 		else if(salario <= 2571.29) {
 			desconto = salario * (9/100);
