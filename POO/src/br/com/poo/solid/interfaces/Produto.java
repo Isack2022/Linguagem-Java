@@ -14,7 +14,7 @@ public class Produto {
 		super();
 		this.id = id;
 		this.descricao = descricao;
-		this.preco = preco;
+		this.preco = preco; 
 	}
 
 

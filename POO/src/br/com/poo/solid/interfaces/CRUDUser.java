@@ -10,7 +10,7 @@ public class CRUDUser implements Usuario<User>{
 
 	@Override
 	public User listar() {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub 
 		return null;
 	}
 

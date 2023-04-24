@@ -5,3 +5,4 @@ public interface Geral<T> {
 	String gravar(T objeto);
 	T listar();
 }
+ 

@@ -4,3 +4,4 @@ public interface Usuario<T> extends Geral<T>{
 	String alterarSenha(T us);
 	
 }
+ 

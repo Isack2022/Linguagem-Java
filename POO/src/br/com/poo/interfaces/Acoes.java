@@ -6,3 +6,4 @@ public interface Acoes {
 		double soma (double[]valores);  
 	
 }
+ 
