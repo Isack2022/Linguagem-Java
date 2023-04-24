@@ -32,7 +32,7 @@ public class Calculadora extends JFrame {
 	private JButton btn4;
 	private JButton btn5;
 	private JButton btn6;
-	private JButton btn7;
+	private JButton btn7; 
 	private JButton btn8;
 	private JButton btn9;
 	private JButton btn0;
