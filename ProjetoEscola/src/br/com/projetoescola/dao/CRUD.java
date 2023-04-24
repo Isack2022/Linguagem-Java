@@ -9,6 +9,6 @@ public interface CRUD<T> {
 	T atualizar(T obj);
 	String apagar(T obj);
 	
-	
+	 
 	
 }

@@ -12,7 +12,7 @@ public class Curso {
 	private String horarioinicio;
 	private String horariotermino;
 	
-	public Curso() {
+	public Curso() {   
 	}
 	
 	public Curso(Long idCurso, String titulo, String descricao, Date datainicio, Date datatermino, String horarioinicio,

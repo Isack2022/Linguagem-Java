@@ -10,7 +10,7 @@ public class CRUDCurso extends Conexao implements CRUD<Curso>{
 
 	@Override
 	public String gravar(Curso obj) {
-		String msg = "";
+		String msg = ""; 
 		try {
 			abrirConexao();
 			String sql = "insert into curso(titulo,descricao,datainicio,datatermino,horarioinicio,horariotermino)values(?,?,?,?,?,?)";
