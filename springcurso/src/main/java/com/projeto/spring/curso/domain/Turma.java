@@ -33,7 +33,7 @@ public class Turma {
 		this.idturma = idturma;
 		this.descricao = descricao;
 		this.idcurso = idcurso;
-		this.idsala = idsala;
+		this.idsala = idsala; 
 		this.horario = horario;
 	}
 

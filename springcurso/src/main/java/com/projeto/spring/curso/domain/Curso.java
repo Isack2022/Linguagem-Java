@@ -23,7 +23,7 @@ public class Curso {
 	
 	@Column(nullable=false)
 	private Double preco;
-
+ 
 	public Curso() {
 	}
 

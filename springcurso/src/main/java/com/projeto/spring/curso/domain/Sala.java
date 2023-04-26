@@ -13,7 +13,7 @@ public class Sala {
 	@Column(nullable=false)
 	private Long idsala;
 	
-	@Column(nullable=false)
+	@Column(nullable=false) 
 	private int numero;
 	
 	@Column(nullable=false)

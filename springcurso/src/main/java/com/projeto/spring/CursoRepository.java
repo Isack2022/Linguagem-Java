@@ -7,3 +7,4 @@ import com.projeto.spring.curso.domain.Curso;
 public interface CursoRepository extends JpaRepository<Curso, Long>{
 
 }
+ 

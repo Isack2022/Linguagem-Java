@@ -35,7 +35,7 @@ public class TurmaController {
 	public String cadastrar(@RequestBody Turma turma) {
 	
 		tm.save(turma);
-		return "Cadastrou";
+		return "Cadastrou"; 
 	}  
 	
 	@PutMapping("/turma/atualizar/{id}")

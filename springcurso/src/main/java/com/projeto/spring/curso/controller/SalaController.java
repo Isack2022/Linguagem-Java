@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.projeto.spring.SalaRepository;
 import com.projeto.spring.curso.domain.Curso;
 import com.projeto.spring.curso.domain.Sala;
-
+ 
 @RestController
 public class SalaController {
 	

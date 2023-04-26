@@ -35,7 +35,7 @@ public class CursoController {
 	
 		cr.save(curso);
 		return "Cadastrou";
-	}
+	} 
 	
 	@PutMapping("/curso/atualizar/{id}")
 	public String atualizar(@PathVariable Long id,@RequestBody Curso curso) {
